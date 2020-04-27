@@ -5,6 +5,13 @@
 <p>Total: R$ 42,68</p>
 
 <h2>Carro</h2>
-<p>Gasolina: R$ 8,34<br>
-Estacionamento: R$ 15,00<br>
-Total: R$ 23,34</p>
+<script>
+    var totalGasolina = parseFloat(prompt("Digite o quanto gastará com gasolina"));
+    var totalEstacionamento = parseFloat(prompt("Digite o quanto gastará com estacionamento"));
+    var totalCarro = totalGasolina + totalEstacionamento;
+    document.write("Gasolina: R$ " + totalGasolina.toFixed(2).replace(".",","));
+    document.write("<br>");
+    document.write("Estacionamento: R$ " + totalEstacionamento.toFixed(2).replace(".",","));
+    document.write("<br>");
+    document.write("Total: R$ " + totalCarro.toFixed(2).replace(".",","));
+</script>
