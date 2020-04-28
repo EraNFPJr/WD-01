@@ -1,10 +1,21 @@
 <meta charset="utf-8">
 <h1>Calculadora de IMC</h1>
 <script>
-    var altura = prompt("Qual a sua altura?");
-    var peso = prompt("Qual o seu peso?");
+    var mensagem;   
+   function pegaNumero(){
+       return parseFloat(prompt(mensagem).replace(",", "."));
+   }
+</script>
+<script>
+    mensagem = "Qual a sua altura?";
+    var altura = pegaNumero();
+
+    mensagem = "Qual o seu peso?";
+    var peso = pegaNumero();
     
     var imc = peso / (altura * altura);
 
-    document.write("O seu IMC é : " + imc.toFixed(2))
+    document.write(`
+        O seu IMC é : ${imc.toFixed(2).replace(".",",")}
+    `)
 </script>
