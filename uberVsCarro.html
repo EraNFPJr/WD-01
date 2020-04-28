@@ -1,6 +1,7 @@
 <meta charset="utf-8">
 <h1>Uber vc Carro</h1>
 <script src="js/pegaNumero.js"></script>
+<script src="js/libRelogio.js"></script>
 
 <h2>Uber</h2>
 <script>
@@ -14,9 +15,15 @@
     var tempoEmMinutos = tempoEmHoras * 60;
     var totalUber = 2 + distancia * 1.4 + tempoEmMinutos * 0.26;
 
+    tempo = tempoEmMinutos;
+    var tempoFormatado = formataRelogio();
     document.write(`
-        Total: R$ ${totalUber.toFixed(2).replace(".",",")}
+    Tempo: ${tempoFormatado};
+    <br>    
+    Total: R$ ${totalUber.toFixed(2).replace(".",",")}
     `)
+
+
 </script>
 
 <h2>Carro</h2>
